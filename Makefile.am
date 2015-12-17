@@ -217,18 +217,6 @@ tools_show_array_show_array_SOURCES = \
 
 endif WITH_TOOLS
 
-# local: tools/show_linked_records/show_linked_records
-#------------------------------------------------------------------------------
-if WITH_TOOLS
-
-noinst_PROGRAMS += tools/show_linked_records/show_linked_records
-tools_show_linked_records_show_linked_records_CPPFLAGS = -I${srcdir}/include ${bitcoin_CPPFLAGS} ${bitcoin_consensus_CPPFLAGS}
-tools_show_linked_records_show_linked_records_LDADD = src/libbitcoin-blockchain.la ${bitcoin_LIBS} ${bitcoin_consensus_LIBS}
-tools_show_linked_records_show_linked_records_SOURCES = \
-    tools/show_linked_records/show_linked_records.cpp
-
-endif WITH_TOOLS
-
 # local: tools/show_records/show_records
 #------------------------------------------------------------------------------
 if WITH_TOOLS
@@ -354,7 +342,6 @@ target_tools = \
     tools/read_htdb_record_value/read_htdb_record_value \
     tools/read_htdb_slab_value/read_htdb_slab_value \
     tools/show_array/show_array \
-    tools/show_linked_records/show_linked_records \
     tools/show_records/show_records \
     tools/spend_db/spend_db \
     tools/stealth_db/stealth_db \
